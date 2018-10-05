@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="avatar.css" />
+    <link rel="stylesheet" href="croppie.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+                crossorigin="anonymous"></script>    
+    <script src="croppie.js"></script>    
+    <script src="avatar.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <input type="button" onclick="selectAvatar()" value="Select Image" />
+    <input id="avatarfile" type="file" accept="image/*" capture="environment" onchange="newAvatar(this)" style="visibility: hidden">
+    <div id="avatarInstructions" style="display: none; padding-top: 10px;">
+        Use the slider or mouse wheel to zoom. Drag the image to center.
+    </div>
+    <img id="image" src="#" style="visibility: hidden" />
+    <input id="avatarBase64" name="avatarBase64" type="hidden" />
+    <img id="currentAvatar" style="display: none" />
+    <!-- <img id="currentAvatar" src="<% base64 string image from data %>" style="display: none" /> -->
+    <input id="hasAvatar" type="hidden" value="<% boolean from data %>" />
+</body>
+
+</html>
