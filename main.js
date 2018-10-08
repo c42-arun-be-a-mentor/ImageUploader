@@ -14,6 +14,7 @@ function selectAvatar(event) {
 
 function newAvatar(event) {
     if (fileChange(event)) {
+        const currentAvatar = $("#currentAvatar");
         currentAvatar.hide();
         $("#avatarInstructions").show();
     }
